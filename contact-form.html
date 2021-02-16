@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en' >
+<head>
+<meta   charset='utf-8'>
+<title>Contact form</title>
+<style>
+    form {
+        font-size: 20px;
+        margin: 20px;
+    }
+    legend {
+        margin: 5px 0;
+    }
+    
+</style>
+</head>
+<body>
+    <form action="action_page.php">
+        <legend>Nickname:</legend>
+        <input type="text" name="firstname" placeholder="your nickname">
+        <br><br>
+
+        <legend>Select gender:</legend>
+        <input type="radio" name="gender" value="male" checked> Male <br />
+        <input type="radio" name="gender" value="female"> Female <br />
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <legend>Your birthday:</legend>
+        <input class="border" type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" placeholder="01.01.1980" maxlength="10"
+            id="birthday" name="birthday">
+        <br><br>
+
+        <legend>Select your pet:</legend>
+        <select name="pets">
+            <option value="cat" selected>cat</option>
+            <option value="dog">dog</option>
+            <option value="parrot">parrot </option>
+            <option value="fish">fish </option>
+            <option value="snake">snake </option>
+        </select>
+        <br><br>
+
+        <legend>Photos</legend>
+        <label class="separator" for="photo">Upload photo</label>
+        <input class="filerow" type="file" id="photo" name="photo">
+        <label class="separator" for="selfie">Upload selfie</label>
+        <input class="filerow" type="file" id="selfie" name="selfie">
+        <label class="separator" for="pets">Upload Photo with your pet</label>
+        <input class="filerow" type="file" id="pets" name="pets">
+        <br><br>
+
+        <legend>Do you like to live in Austria?</legend>
+        <textarea name="message" rows="10" cols="30">Lorem ipsum default text</textarea>
+        <br><br>
+        
+        <input type="submit" value="Submit your data">
+    </form>
+    
+</body>
+</html>
